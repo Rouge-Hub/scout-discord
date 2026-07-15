@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Scout Discord Bot</title>
+    <meta
+      name="description"
+      content="Scout is a Discord bot for slash commands, reminders, server info, user lookups, and optional AI chat."
+    />
+    <meta property="og:title" content="Scout Discord Bot" />
+    <meta
+      property="og:description"
+      content="Commands, reminders, server tools, and optional AI chat for your Discord server."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#12d6a3" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <nav class="topbar" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Scout home">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span>Scout</span>
+        </a>
+        <div class="nav-actions">
+          <a href="#commands">Commands</a>
+          <a href="#about">About</a>
+          <a href="#legal">Terms</a>
+          <a class="button ghost" href="https://discord.com/oauth2/authorize?client_id=1526777044581486622&amp;permissions=8&amp;integration_type=0&amp;scope=applications.commands+bot" target="_blank" rel="noreferrer">
+            Invite
+          </a>
+        </div>
+      </nav>
+
+      <section id="home" class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Discord bot companion</p>
+          <h1>Meet Scout, your server's helpful command bot.</h1>
+          <p class="lede">
+            Scout handles quick utilities, member lookups, reminders, dice rolls,
+            server info, and optional AI replies when mentioned in chat.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://discord.com/oauth2/authorize?client_id=1526777044581486622&amp;permissions=8&amp;integration_type=0&amp;scope=applications.commands+bot" target="_blank" rel="noreferrer">
+              Invite Scout
+            </a>
+            <a class="button secondary" href="#legal">View Terms and Privacy</a>
+          </div>
+        </div>
+
+        <aside class="bot-panel" aria-label="Scout bot snapshot">
+          <div class="bot-orbit" aria-hidden="true">
+            <span class="bot-core">S</span>
+            <span class="orbit one"></span>
+            <span class="orbit two"></span>
+            <span class="orbit three"></span>
+          </div>
+          <div class="panel-row">
+            <span>Status</span>
+            <strong>Online-ready</strong>
+          </div>
+          <div class="panel-row">
+            <span>Mode</span>
+            <strong id="moodLabel">Slash commands</strong>
+          </div>
+          <div class="panel-row">
+            <span>Memory</span>
+            <strong>About 10 minutes</strong>
+          </div>
+          <button class="full-button" id="shuffleMood" type="button">Cycle feature</button>
+        </aside>
+      </section>
+
+      <section id="commands" class="section-block">
+        <div class="section-heading">
+          <p class="eyebrow">Command deck</p>
+          <h2>What Scout can do</h2>
+        </div>
+        <div class="command-grid">
+          <article>
+            <span>/help</span>
+            <h3>Command guide</h3>
+            <p>Shows every available command with a short description.</p>
+          </article>
+          <article>
+            <span>/server</span>
+            <h3>Server info</h3>
+            <p>Displays server details, owner, boosts, channels, and features.</p>
+          </article>
+          <article>
+            <span>/user</span>
+            <h3>User lookup</h3>
+            <p>Shows account, avatar, roles, and server join information.</p>
+          </article>
+          <article>
+            <span>/remind</span>
+            <h3>Temporary reminders</h3>
+            <p>Sets a reminder while Scout is running.</p>
+          </article>
+          <article>
+            <span>/roll</span>
+            <h3>Dice roller</h3>
+            <p>Rolls formats like 1d20, 2d6, or 4d10.</p>
+          </article>
+          <article>
+            <span>@Scout</span>
+            <h3>Optional AI chat</h3>
+            <p>When configured, Scout can answer mentions and image questions.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <div>
+          <p class="eyebrow">Built for small communities</p>
+          <h2>A practical bot with a friendly face.</h2>
+        </div>
+        <div class="status-list">
+          <article>
+            <span class="dot live"></span>
+            <div>
+              <h3>Slash commands first</h3>
+              <p>Scout uses Discord slash commands so members can discover tools without memorizing prefixes.</p>
+            </div>
+          </article>
+          <article>
+            <span class="dot warm"></span>
+            <div>
+              <h3>Admin-safe speaking</h3>
+              <p>The /say command is limited to members with Administrator permission.</p>
+            </div>
+          </article>
+          <article>
+            <span class="dot cool"></span>
+            <div>
+              <h3>Optional AI layer</h3>
+              <p>AI replies only work if the owner configures an OpenRouter API key.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="legal" class="legal-section">
+        <div class="section-heading">
+          <p class="eyebrow">Server trust</p>
+          <h2>Terms and Privacy</h2>
+          <p class="section-copy">
+            These policies are written for Scout as a Discord bot. Replace the contact line
+            with your preferred Discord tag or email before publishing.
+          </p>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Legal documents">
+          <button class="tab active" id="terms-tab" type="button" role="tab" aria-selected="true" aria-controls="terms-panel">
+            Terms of Service
+          </button>
+          <button class="tab" id="privacy-tab" type="button" role="tab" aria-selected="false" aria-controls="privacy-panel">
+            Privacy Policy
+          </button>
+        </div>
+
+        <article class="policy-panel active" id="terms-panel" role="tabpanel" aria-labelledby="terms-tab">
+          <h3>Terms of Service</h3>
+          <p><strong>Last updated:</strong> July 15, 2026</p>
+          <p>
+            By adding or using Scout in a Discord server, you agree to these Terms of Service.
+            If you do not agree, do not use Scout and remove it from your server.
+          </p>
+          <h4>1. What Scout does</h4>
+          <p>
+            Scout provides Discord utility features such as slash commands, server information,
+            user information, avatars, banners, dice rolls, coin flips, reminders, admin-controlled
+            messages, and optional AI chat responses when configured by the bot owner.
+          </p>
+          <h4>2. Acceptable use</h4>
+          <p>
+            You may not use Scout to harass people, spam servers, impersonate others, break Discord's
+            rules, distribute harmful content, or violate any law. Server owners and moderators are
+            responsible for how Scout is used in their communities.
+          </p>
+          <h4>3. Availability</h4>
+          <p>
+            Scout is provided as-is. It may go offline, restart, lose temporary reminders, or stop
+            responding without notice. Scout is not meant for emergency, safety-critical, financial,
+            medical, or legal use.
+          </p>
+          <h4>4. AI responses</h4>
+          <p>
+            If AI chat is enabled, Scout may send messages and attachments to an external AI provider
+            for processing. AI responses can be incomplete, incorrect, or inappropriate. You should not
+            rely on them as professional advice.
+          </p>
+          <h4>5. Changes</h4>
+          <p>
+            These terms may be updated from time to time. Continued use of Scout after changes means
+            you accept the updated terms.
+          </p>
+          <h4>6. Contact</h4>
+          <p>
+            For questions or removal requests, contact the bot owner through Discord: llrougell.
+          </p>
+        </article>
+
+        <article class="policy-panel" id="privacy-panel" role="tabpanel" aria-labelledby="privacy-tab" hidden>
+          <h3>Privacy Policy</h3>
+          <p><strong>Last updated:</strong> July 15, 2026</p>
+          <p>
+            This Privacy Policy explains what Scout may process when it is used in a Discord server.
+          </p>
+          <h4>1. Information Scout may process</h4>
+          <p>
+            Scout may process Discord user IDs, usernames, display names, server IDs, channel IDs,
+            command inputs, message content that mentions Scout, image attachment URLs sent with a
+            Scout mention, and temporary reminder text.
+          </p>
+          <h4>2. How information is used</h4>
+          <p>
+            Scout uses this information to respond to commands, display Discord account or server
+            information, send reminders, continue short follow-up conversations, and provide optional
+            AI responses when that feature is enabled.
+          </p>
+          <h4>3. Temporary memory</h4>
+          <p>
+            Scout keeps recent chat context in memory for about 10 minutes per user and channel while
+            the bot is running. This memory is temporary and is cleared when it expires or when the bot
+            restarts.
+          </p>
+          <h4>4. Third-party services</h4>
+          <p>
+            Scout runs on Discord and depends on Discord's platform. If AI chat is enabled, prompts,
+            recent conversation context, and image attachment URLs may be sent to OpenRouter or the
+            configured AI provider so Scout can generate a reply.
+          </p>
+          <h4>5. Data storage</h4>
+          <p>
+            This version of Scout does not include a database. It may log technical errors in the bot
+            console for troubleshooting. Do not send private or sensitive information to Scout.
+          </p>
+          <h4>6. Your choices</h4>
+          <p>
+            You can stop a conversation by mentioning Scout and saying stop, end, done, cancel,
+            never mind, or goodbye. Server administrators can remove Scout from a server at any time.
+          </p>
+          <h4>7. Contact</h4>
+          <p>
+            For privacy questions or removal requests, contact the bot owner through Discord: llrougell.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">Copied</div>
+    <script src="app.js"></script>
+  </body>
+</html>
