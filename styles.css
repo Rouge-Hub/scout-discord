@@ -77,14 +77,12 @@ button {
 }
 
 .brand-mark {
-  display: grid;
   width: 34px;
   height: 34px;
-  place-items: center;
   border: 1px solid rgba(18, 214, 163, 0.45);
-  border-radius: 7px;
-  color: #07110f;
-  background: var(--mint);
+  border-radius: 50%;
+  object-fit: cover;
+  background: #06110f;
   box-shadow: 0 0 26px rgba(18, 214, 163, 0.35);
 }
 
@@ -223,17 +221,15 @@ h2 {
 .bot-core {
   position: relative;
   z-index: 2;
-  display: grid;
-  width: 94px;
-  height: 94px;
-  place-items: center;
-  border: 1px solid rgba(18, 214, 163, 0.75);
-  border-radius: 8px;
-  color: #07110f;
-  background: var(--mint);
-  font-size: 3rem;
-  font-weight: 900;
-  box-shadow: 0 0 48px rgba(18, 214, 163, 0.35);
+  width: 154px;
+  height: 154px;
+  border: 2px solid rgba(247, 198, 95, 0.82);
+  border-radius: 50%;
+  object-fit: cover;
+  background: #06110f;
+  box-shadow:
+    0 0 48px rgba(18, 214, 163, 0.28),
+    0 0 34px rgba(247, 198, 95, 0.22);
 }
 
 .orbit {
