@@ -150,6 +150,13 @@ h2 {
   line-height: 1.7;
 }
 
+.legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -402,6 +409,15 @@ h2 {
   font-size: 1.05rem;
 }
 
+.policy-page h1 {
+  margin-bottom: 14px;
+  font-size: clamp(3rem, 8vw, 6rem);
+}
+
+.standalone {
+  min-height: calc(100vh - 110px);
+}
+
 .toast {
   position: fixed;
   right: 22px;
@@ -469,6 +485,10 @@ h2 {
   .tab {
     width: 100%;
     text-align: center;
+  }
+
+  .legal-links {
+    display: grid;
   }
 
   .ghost {
